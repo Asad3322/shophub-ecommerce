@@ -19,7 +19,7 @@ const Signup = () => {
         email: form.email,
         password: form.password,
       };
-      const res = await axios.post("http://localhost:5000/api/auth/signup", payload);
+      const res = await axios.post("https://shophub-backend.vercel.app/api/auth/signup", payload);
       toast.success(res.data.message || "Signup successful!");
     } catch (error) {
       const message = error.response?.data?.message || "Signup failed!";
