@@ -1,0 +1,6 @@
+npx => node package executor
+used when we have to create a project.
+
+npm => node package manager
+used when we have to install package in a project.
+

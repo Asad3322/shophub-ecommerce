@@ -1,0 +1,293 @@
+/* Lobster Font */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.lobster-font {
+    font-family: 'Lobster', cursive;
+}
+
+/* New Arrivals Section Styles */
+.new-arrivals-section {
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.separator-gradient {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(45deg, #007bff, #00f2fe);
+    margin-top: 20px;
+}
+
+/* Product Card Styles */
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+}
+
+.product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-actions {
+    transform: translateY(0);
+}
+
+.action-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: #007bff;
+    color: white;
+    transform: scale(1.1);
+}
+
+.product-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 15px;
+    background: #dc3545;
+    color: white;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.product-content {
+    padding: 20px;
+}
+
+.product-category {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.product-rating span {
+    color: #666;
+    margin-left: 5px;
+}
+
+.product-price {
+    margin-bottom: 15px;
+}
+
+.current-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #007bff;
+}
+
+/* Add to Cart Button */
+.btn-add-cart {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-add-cart:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Blue underline for active category button */
+.btn-filter {
+    border: none;
+    background: transparent;
+    color: #555;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    margin: 0 6px;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.btn-filter.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 60%;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-filter:hover {
+    color: #007bff;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-title {
+        font-size: 1rem;
+    }
+
+    .current-price {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-actions {
+        gap: 5px;
+    }
+
+    .action-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Dark Theme Enhancements */
+.dark-theme .section-header h2,
+.dark-theme .section-header h6 {
+    color: #ff69b4 !important;
+}
+
+.dark-theme .product-card {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme .product-title,
+.dark-theme .product-category,
+.dark-theme .product-price,
+.dark-theme .current-price,
+.dark-theme .product-rating span {
+    color: #000;
+}
+
+.dark-theme .product-content {
+    background-color: transparent;
+}
+
+.dark-theme .product-tag {
+    background-color: #ff69b4;
+}
+
+.dark-theme .product-overlay {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme .action-btn {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.dark-theme .action-btn:hover {
+    background: #ff69b4;
+    color: #fff;
+}
+
+.dark-theme .btn-add-cart {
+    background: transparent;
+    border-color: #ff69b4;
+    color: #ff69b4;
+}
+
+.dark-theme .btn-add-cart:hover {
+    background: #ff69b4;
+    color: #fff;
+}
+
+/* Light Theme Enhancements */
+.light-theme .section-header h2,
+.light-theme .section-header h6 {
+  color: #007bff;
+}

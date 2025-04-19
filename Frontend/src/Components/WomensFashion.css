@@ -1,0 +1,169 @@
+/* === Scoped to WomensFashion Page === */
+.womens-fashion .section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: 'Lobster', cursive;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+body:not(.dark-mode) .womens-fashion .section-heading {
+  color: #cc3366;
+}
+
+body.dark-mode .womens-fashion .section-heading {
+  color: #fff;
+}
+
+body:not(.dark-mode) .womens-fashion .category-title,
+body:not(.dark-mode) .womens-fashion .category-description,
+body:not(.dark-mode) .womens-fashion .category-price {
+  color: #222;
+}
+
+body.dark-mode .womens-fashion .category-title,
+body.dark-mode .womens-fashion .product-title,
+body.dark-mode .womens-fashion .category-price,
+body.dark-mode .womens-fashion .category-description {
+  color: #3399ff !important;
+}
+
+body.dark-mode .womens-fashion .product-content {
+  background-color: transparent !important;
+}
+
+body.dark-mode .womens-fashion .product-card {
+  background-color: #ffffff !important;
+  color: #3399ff;
+}
+
+.womens-fashion .category-description,
+.womens-fashion .product-content,
+.womens-fashion .product-card,
+.womens-fashion .product-title {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body:not(.dark-mode) .womens-fashion .btn-outline-light {
+  border-color: #cc3366;
+  color: #cc3366;
+}
+
+body:not(.dark-mode) .womens-fashion .btn-outline-light:hover {
+  background-color: #cc3366;
+  color: #fff;
+}
+
+.womens-fashion .btn-add-cart {
+  background-color: #3399ff;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.womens-fashion .btn-add-cart:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.womens-fashion .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Responsive product image using aspect-ratio */
+.womens-fashion .product-image {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  overflow: hidden;
+}
+
+.womens-fashion .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.womens-fashion .product-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.womens-fashion .btn-filter:focus,
+.womens-fashion .btn-filter:active {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.womens-fashion .btn-filter {
+  border: none;
+  color: #333;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.womens-fashion .btn-filter.active {
+  text-decoration: underline;
+  text-decoration-color: #3399ff;
+  color: #3399ff;
+}
+
+.womens-fashion .btn-filter:hover {
+  text-decoration: none;
+  color: #3399ff;
+}
+
+.womens-fashion .product-card[data-category] {
+  display: none;
+}
+
+.womens-fashion .product-card[data-category].show {
+  display: flex !important;
+}
+
+.womens-fashion .product-form {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+body.dark-mode .womens-fashion .product-form {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.womens-fashion .product-form input,
+.womens-fashion .product-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.womens-fashion .product-form button {
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.womens-fashion .product-form button:hover {
+  background-color: #007bff;
+}

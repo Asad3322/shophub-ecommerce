@@ -1,0 +1,192 @@
+/* === Navbar Styling === */
+.navbar {
+  background: linear-gradient(135deg, #13547a 0%, #80d0c7 100%);
+  padding: 1rem;
+  transition: background-color 0.4s ease;
+}
+
+.navbar-brand {
+  font-family: 'Lobster', cursive;
+  font-size: 1.6rem;
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Bar */
+.search-box {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.search-box::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Icon Badge */
+.icon-badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #ff4757;
+  color: white;
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Gap */
+.gap-3 > * {
+  margin-right: 0.75rem;
+}
+
+/* Offcanvas Dark Style */
+.offcanvas-header,
+.offcanvas-body {
+  background: linear-gradient(135deg, #13547a 0%, #80d0c7 100%);
+  color: white;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+  background: linear-gradient(135deg, #1e1e1e 0%, #2c3e50 100%);
+}
+
+body.dark-mode .navbar a,
+body.dark-mode .navbar .btn {
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .search-box {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f1f1f1;
+}
+
+body.dark-mode .search-box::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* === Notification Dropdown Styling === */
+.notification-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 280px;
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  padding: 10px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  animation: fadeIn 0.2s ease-in-out;
+  font-size: 0.9rem;
+}
+
+.notification-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  border-width: 0 8px 10px 8px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.notification-item {
+  padding: 10px 15px;
+  transition: background 0.3s ease;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item:hover {
+  background-color: #f7f7f7;
+}
+
+.notification-item p {
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.notification-item .time {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Dark mode for dropdown */
+body.dark-mode .notification-dropdown {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .notification-dropdown::before {
+  border-color: transparent transparent #1f1f1f transparent;
+}
+
+body.dark-mode .notification-item {
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .notification-item:hover {
+  background-color: #292929;
+}
+
+body.dark-mode .notification-item p {
+  color: #f1f1f1;
+}
+
+body.dark-mode .notification-item .time {
+  color: #aaa;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
