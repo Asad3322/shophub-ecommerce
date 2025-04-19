@@ -24,9 +24,6 @@ ShopHub is a full stack ecommerce web application where users can browse product
 
 ---
 
-## 🌐 Live Site
-
-[👉 Visit Site](https://your-vercel-link.vercel.app)
 
 ---
 
